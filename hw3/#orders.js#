@@ -1,0 +1,37 @@
+//js file to handle the contain function that handles
+//request for particular month's orders
+
+//currently replies with the same, hardcoded orders data
+//https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
+
+//from other js files
+var express = require('express');
+var router = express.Router();
+
+
+let orders_array = [
+{"topping": "plain",
+ "quantity": "3"
+}
+    
+{"topping": "chocolate",
+"quantity": "1",
+}
+    
+{"topping": "cherry",
+ "quantity": "2"
+}
+
+]
+
+//send as actual JSON object, dont stringify 
+const orders_string = JSON.stringify(orders_array);
+
+//send JSON  to client side
+router.get('/', function(req, res, next) {
+    //use router.post instead of get
+    res.send(orders_string);
+}
+//gets recieved by scripts.js
+
+module.exports = router;  //from other js files

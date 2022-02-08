@@ -1,0 +1,23 @@
+//js file to handle the contain function that handles
+//request for particular month's orders
+
+//currently replies with the same, hardcoded orders data
+//https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
+
+let ordersarray = [
+{"topping": "plain",
+ "quantity": "3"
+}
+    
+{"topping": "chocolate",
+"quantity": "1",
+}
+    
+{"topping": "cherry",
+ "quantity": "2"
+}
+
+]
+
+//use JSON.stringify() to convert object into JSON string
+
